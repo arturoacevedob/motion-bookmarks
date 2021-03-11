@@ -1,32 +1,33 @@
 {
+  "private": false,
   "name": "neue-motion-bookmarks",
   "version": "1.0.0",
-  "private": true,
-  "description": "neue motion bookmarks",
-  "author": "arturoacevedob@gmail.com",
-  "keywords": [
-    "gatsby"
-  ],
+  "author": "Sanity <hello@sanity.io>",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "lerna clean",
+    "deploy": "lerna run deploy",
+    "empty-cache": "lerna run empty-cache",
+    "init": "cd studio && sanity init && lerna run graphql-deploy",
+    "format": "lerna run format",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "lint": "lerna run lint",
+    "now-deploy": "now && now alias",
+    "workers-start": "lerna run workers-start",
+    "workers-deploy": "lerna run workers-deploy",
+    "postinstall": "lerna bootstrap",
+    "sanity-deploy": "lerna run sanity-deploy",
+    "start": "lerna run empty-cache && lerna run start --parallel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lerna": "^3.14.1",
+    "prettier": "2.2.1",
+    "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "gatsby": "^3.0.1",
-    "gatsby-plugin-gatsby-cloud": "^2.0.0",
-    "gatsby-plugin-google-analytics": "^3.0.0",
-    "gatsby-plugin-image": "^1.0.0",
-    "gatsby-plugin-manifest": "^3.0.0",
-    "gatsby-plugin-react-helmet": "^4.0.0",
-    "gatsby-plugin-sharp": "^3.0.0",
-    "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-source-sanity": "^6.0.5",
-    "gatsby-transformer-sharp": "^3.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "gatsby-image": "^3.0.0"
   }
 }

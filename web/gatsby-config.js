@@ -1,13 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "neue motion bookmarks",
+    title: `Motion Bookmarks`,
+    description: `The Resource-Hub for Motion Designers.`,
+    author: `@arturoacevedo.design`,
   },
   plugins: [
     {
       resolve: "gatsby-source-sanity",
       options: {
         projectId: "uqgclw23",
-        dataset: "",
+        dataset: "production",
+        watchMode: true,
+        overlayDrafts: true
       },
     },
     "gatsby-plugin-gatsby-cloud",
