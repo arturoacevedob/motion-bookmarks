@@ -39,12 +39,12 @@ const Index = ({ data }) => (
     {data.allSanityContent.nodes.map((content) => (
       <div>
         {content.category.map((category) => {
-          return <div>
+          return <div className="category-container">
             <h3 id={category.slug}>{category.category}</h3>
             {category.subcategory.map((subcategory) => {
               return (
                 <div>
-                  <h4>{subcategory.subcategory}</h4>
+                  {subcategory.subcategory !== "Motion design" && <h4>{subcategory.subcategory}</h4>}
                   <div className="card-layout">
                     {subcategory.bookmark.map((content) => {
                       return <BookmarkCard key={content.id} {...content} />;

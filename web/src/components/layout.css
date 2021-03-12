@@ -5,14 +5,15 @@
   --bg: #f4f7fa;
   --color: #ff7b66;
 
-  --h3-padding: 30px 0 0 0;
+  --h3-padding: 30px 0 15px 0;
   --h4-padding: 20px 0 10px 0;
   --h5-padding: 10px 0 0 0;
-  --card-details-padding: 10px 0 0 0;
+  --card-text-padding: 15px 0 0 0;
+  --card-details-padding: 5px 0 0 0;
   --paragraph-padding: 15px 0 0 0;
 
-  --horizontal-padding: 20px;
-  --vertical-padding: 15px;
+  --horizontal-padding: 25px;
+  --vertical-padding: 20px;
   --equal-padding: var(--horizontal-padding);
   --smaller-equal-padding: var(--vertical-padding);
 
@@ -52,7 +53,11 @@
 
 .content {
   grid-column: 2/3;
+}
+
+.category-container {
   padding: var(--equal-padding);
+  border-bottom: solid 1px var(--light);;
 }
 
 .card-layout {
@@ -114,7 +119,7 @@ img {
 }
 
 .card-text-wrapper {
-  padding-top: var(--smaller-equal-padding);
+  padding: var(--card-text-padding);
 }
 
 /* Borders */
