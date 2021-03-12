@@ -40,7 +40,7 @@ const Index = ({ data }) => (
       <div>
         {content.category.map((category) => {
           return <div>
-            <h3>{category.category}</h3>
+            <h3 id={category.slug}>{category.category}</h3>
             {category.subcategory.map((subcategory) => {
               return (
                 <div>
