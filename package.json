@@ -20,7 +20,8 @@
     "postinstall": "lerna bootstrap",
     "sanity-deploy": "lerna run sanity-deploy",
     "start": "lerna run empty-cache && lerna run start --parallel",
-    "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
+    "build-studio": "(cd studio && npm run build)",
+    "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=Y_STU$SANITY_DEPLODIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
