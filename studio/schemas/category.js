@@ -1,12 +1,12 @@
 export default {
   name: "category",
-  type: "object",
+  type: "document",
   title: "Category",
   fields: [
     {
-      name: "category",
+      name: "title",
       type: "string",
-      title: "Category",
+      title: "Title",
     },
     {
       name: "slug",
@@ -17,6 +17,12 @@ export default {
       name: "subcategory",
       type: "array",
       of: [{ type: "subcategory" }],
+    },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
     },
   ],
 };

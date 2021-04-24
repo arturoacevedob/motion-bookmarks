@@ -1,16 +1,15 @@
 import React from "react";
-// import { GatsbyImage } from "gatsby-plugin-image";
-import Image from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 // import PropTypes from "prop-types"
 
 const BookmarkCard = ({ title, description, cover, detail, url }) => {
+  const image = getImage(cover.asset)
   return (
     <article className="card">
       <div className="card-hover">
         <figure className="card-image-wrapper">
           <a href={url} target="_blank">
-            {/*<GatsbyImage image={cover.asset.fluid} alt={title + " Artwork"} />*/}
-            <Image fluid={cover.asset.fluid} alt={title + " Artwork"} />
+            <GatsbyImage image={image} alt={title + " Artwork"} />
           </a>
         </figure>
         <div className="card-text-wrapper">

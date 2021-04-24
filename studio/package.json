@@ -7,12 +7,8 @@
   "author": "Arturo Acevedo <arturoacevedob@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity start",
-    "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
-    "build": "sanity build",
-    "graphql-deploy": "sanity graphql deploy --playground",
-    "lint": "eslint .",
-    "test": "sanity check"
+    "start": "sanity start",
+    "build": "sanity build"
   },
   "keywords": [
     "sanity"
@@ -28,7 +24,7 @@
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
-    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+    "sanity-plugin-order-documents": "^0.0.16"
   },
   "devDependencies": {}
 }

@@ -118,6 +118,11 @@ img {
   transition: var(--standard-time);
 }
 
+/* Because gatsby has its own css apparently */
+.gatsby-image-wrapper {
+  border-radius: 10px;
+}
+
 .card-text-wrapper {
   padding: var(--card-text-padding);
 }

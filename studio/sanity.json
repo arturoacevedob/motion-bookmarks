@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "motion-bookmarks"
+    "name": "sanity logoutsanity logoutneue-motion-bookmarks"
   },
   "api": {
     "projectId": "uqgclw23",
@@ -13,7 +13,7 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "dashboard-widget-netlify"
+    "order-documents"
   ],
   "env": {
     "development": {
@@ -26,10 +26,6 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
-    },
-    {
-      "implements": "part:@sanity/dashboard/config",
-      "path": "./dashboardConfig.js"
     }
   ]
 }

@@ -4,30 +4,24 @@ import { Link } from "gatsby";
 
 const Nav = () => {
   const data = useStaticQuery(graphql`
-    {
-      allSanityContent {
-        nodes {
-          category {
-            category
-            slug
-          }
-        }
+  {
+    allSanityCategory {
+      nodes {
+        slug
+        title
       }
     }
+  }
   `);
   return (
     <nav className="nav">
-      {data.allSanityContent.nodes.map((content) => (
-        <ul>
-          {content.category.map((category) => {
-            return (
-              <li>
-                <Link to={"#" + category.slug}>{category.category}</Link>
-              </li>
-            );
-          })}
-        </ul>
-      ))}
+      <ul>
+        {data.allSanityCategory.nodes.map((category) => (
+          <li>
+            <Link to={"/" + category.slug}>{category.title}</Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
