@@ -48,7 +48,7 @@ export const getContent = graphql`
           url
           cover {
             asset {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])
             }
           }
         }
