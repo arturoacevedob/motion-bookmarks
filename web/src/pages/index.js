@@ -11,18 +11,18 @@ const Index = ({ data }) => (
       <div>
         <div className="category-container">
           <h3 id={category.slug}>{category.title}</h3>
-          {category.subcategory.map((subcategory) => {
-            return (
-              <div>
-                {subcategory.subcategory !== "Motion design" && <h4>{subcategory.subcategory}</h4>}
-                <div className="card-layout">
+          <div className="card-layout">
+            {category.subcategory.map((subcategory) => {
+              return (
+                <React.Fragment>
+                  {subcategory.subcategory !== "Motion design" && <h4>{subcategory.subcategory}</h4>}
                   {subcategory.bookmark.map((content) => {
-                    return <BookmarkCard key={content.id} {...content} />;
+                    return <BookmarkCard key={content.id} {...content} />
                   })}
-                </div>
-              </div>
-            );
-          })}
+                </React.Fragment>
+              )
+            })}
+          </div>
         </div>
       </div>
     ))}
